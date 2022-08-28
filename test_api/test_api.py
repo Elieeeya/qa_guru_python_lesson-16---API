@@ -10,8 +10,7 @@ def test_register():
     })
 
     assert response.status_code == 200
-    reg_id = response.json()['id']
-    assert int(response.json()['id']) == reg_id
+    assert int(response.json()['id']) == 4
 
 
 def test_login():
@@ -21,8 +20,7 @@ def test_login():
     })
 
     assert response.status_code == 200
-    token = response.json()['token']
-    assert str(response.json()['token']) == token
+    assert str(response.json()['token']) == 'QpwL5tke4Pnpja7X4'
 
 
 def test_create():
